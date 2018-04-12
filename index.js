@@ -16,7 +16,7 @@ bot.registry.registerDefaults();
 bot.registry.registerCommandsIn(__dirname + "/commands");
 
 bot.on('ready', () => {
-    bot.user.setGame('DJ');
+    bot.user.setGame('Juke');
 })
 
 bot.login(Token);
