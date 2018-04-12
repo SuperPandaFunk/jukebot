@@ -26,7 +26,7 @@ class QueueMusicCommand extends Discord.Command {
             {
                 infoMessage += `${++i}: [${d.getHours() < 10 ? '0' + d.getHours() : d.getHours()}h${d.getMinutes() < 10 ? '0' + d.getMinutes() : d.getMinutes()}]\t ${global.servers[id].queue[i - 1].title}\n`                
                 d.setSeconds(d.getSeconds() + global.servers[id].queue[i - 1].duration);
-                if (i % 5 == 0){
+                if (i % 3 == 0){
                     message.say(infoMessage);
                     infoMessage = "";
                 }
