@@ -5,7 +5,7 @@ global.servers = {};
 const bot = new Discord.Client(
     {
         commandPrefix: 'juke'
-        
+
     }
 );
 
