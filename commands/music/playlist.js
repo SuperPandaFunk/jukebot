@@ -14,7 +14,8 @@ class AddPlaylistMusicCommand extends Discord.Command {
             global.servers[id] = {
                 queue: [],
                 live: {},
-                repeat: 0
+                repeat: 0,
+                hourdiff: 0
             }
         }
         this.isServerExist = function (id) { return !(!global.servers[id]); }
@@ -44,7 +45,9 @@ class AddPlaylistMusicCommand extends Discord.Command {
                                         if (global.servers[message.guild.id] == null) {
                                             global.servers[message.guild.id] = {
                                                 queue: [],
-                                                live: {}
+                                                live: {},
+                                                repeat: 0,
+                                                hourdiff: 0
                                             }
                                         }
                                         global.servers[message.guild.id].queue.push({ title: videoInfo.title, duration: videoInfo.duration, url: videoInfo.url, id: videoInfo.videoId });

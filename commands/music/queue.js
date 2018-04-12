@@ -25,6 +25,7 @@ class QueueMusicCommand extends Discord.Command {
             var i;
             var info = "";
             var d = new Date();
+            d.setHours(d.getHours() + global.servers[message.guild.id].hourdiff);
             for (i = 0; i < Math.min(global.servers[id].queue.length, 50);) {
                 info += `${++i}: [${d.getHours() < 10 ? '0' + d.getHours() : d.getHours()}h${d.getMinutes() < 10 ? '0' + d.getMinutes() : d.getMinutes()}]\t ${global.servers[id].queue[i - 1].title}\n`
                 d.setSeconds(d.getSeconds() + global.servers[id].queue[i - 1].duration);

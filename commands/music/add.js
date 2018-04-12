@@ -46,7 +46,9 @@ class AddMusicCommand extends Discord.Command {
                     if (global.servers[message.guild.id] == null) {
                         global.servers[message.guild.id] = {
                             queue: [],
-                            live: {}
+                            live: {},
+                            repeat: 0,
+                            hourdiff: 0
                         }
                     }
                     global.servers[message.guild.id].queue.push({ title: videoInfo.title, duration: videoInfo.duration, url: videoInfo.url, id: videoInfo.videoId });
@@ -69,7 +71,9 @@ class AddMusicCommand extends Discord.Command {
                         if (global.servers[message.guild.id] == null) {
                             global.servers[message.guild.id] = {
                                 queue: [],
-                                live: {}
+                                live: {},
+                                repeat: 0,
+                                hourdiff: 0
                             }
                         }
                         global.servers[message.guild.id].queue.push({ title: videoInfo.title, duration: videoInfo.duration, url: videoInfo.url, id: videoInfo.videoId });

@@ -14,7 +14,8 @@ class PlayMusicCommand extends Discord.Command{
             global.servers[id] = {
                 queue: [],
                 live: {},
-                repeat : 0
+                repeat: 0,
+                hourdiff: 0
             }
         }
         this.isServerExist = function (id) { return !(!global.servers[id]);}
