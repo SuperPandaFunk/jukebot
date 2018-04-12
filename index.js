@@ -12,6 +12,7 @@ const bot = new Discord.Client(
 
 
 bot.registry.registerGroup('music', 'Music');
+bot.registry.registerGroup('setting', 'Setting');
 bot.registry.registerDefaults();
 bot.registry.registerCommandsIn(__dirname + "/commands");
 
