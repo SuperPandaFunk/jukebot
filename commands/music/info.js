@@ -33,8 +33,14 @@ class InfoMusicCommand extends Discord.Command {
             var info = "";
             for (i = 0; i < Math.min(global.servers[id].queue.length, NbSong);) {
                 info += `${++i}: ${global.servers[id].queue[i - 1].title}\n`
+                if (i % 3 == 0) {
+                    message.say(info);
+                    info = "";
+                }
             }
-            message.say(info)
+            if (info != "") {
+                message.say(info);
+            }
         } 
     }
 }

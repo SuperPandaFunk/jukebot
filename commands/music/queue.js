@@ -16,9 +16,9 @@ class QueueMusicCommand extends Discord.Command {
         });
     }
 
-    async run(message, { NbSong }) {
+    async run(message, args) {
         var id = message.guild.id;
-        if (global.servers[id].queue != null) {
+        if (global.servers[id] != null) {
 
             var i, infoMessage = "";
             var d = new Date();
