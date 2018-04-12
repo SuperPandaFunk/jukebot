@@ -30,9 +30,11 @@ class InfoMusicCommand extends Discord.Command {
             message.say(`Now playing: ${global.servers[id].live.title}`)
             message.say(`${global.servers[id].live.url}`)
             var i;
+            var info = "";
             for (i = 0; i < Math.min(global.servers[id].queue.length, NbSong);) {
-                message.say(`${++i}: ${global.servers[id].queue[i-1].title}`)
+                info += `${++i}: ${global.servers[id].queue[i - 1].title}\n`
             }
+            message.say(info)
         } 
     }
 }
