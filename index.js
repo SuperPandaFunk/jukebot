@@ -19,4 +19,4 @@ bot.on('ready', () => {
     bot.user.setGame('Juke');
 })
 
-bot.login(Token);
+bot.login(process.env.BOT_TOKEN);
