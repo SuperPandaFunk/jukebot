@@ -5,8 +5,8 @@ class SetTimeCommand extends Discord.Command {
         super(client, {
             name: 'time',
             group: 'setting',
-            memberName: 'setTime',
-            aliases: ['hour', 'time'],
+            memberName: 'time',
+            aliases: ['hour', 'settime'],
             description: 'Set the current Hour time',
             args: [
                 {
